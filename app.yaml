@@ -1,4 +1,10 @@
-runtime: nodejs16
+runtime: python27
+api_version: 1
+threadsafe: true
+
 handlers:
+- url: /assets
+  static_dir: assets
 - url: /.*
-  script: auto
+  static_files: index.html
+  upload: index.html
